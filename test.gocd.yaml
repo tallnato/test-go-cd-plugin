@@ -1,7 +1,7 @@
 # simple.gocd.yaml
 pipelines:
   Test.Android:
-    group: Test
+    group: testcenas
     label_template: "${COUNT}"
     locking: on
     materials:
