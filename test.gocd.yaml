@@ -19,4 +19,9 @@ pipelines:
               timeout: 15
               run_instances: 1
               tasks:
-               - script: ./hello_world.sh
+                - script: ./hello_world.sh
+            megaCenas: # name of the job
+              timeout: 15
+              run_instances: 1
+              tasks:
+                - script: ./hello_world.sh
