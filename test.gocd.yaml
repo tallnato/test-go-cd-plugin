@@ -10,7 +10,7 @@ environments:
 
 pipelines:
   Test.Android:
-    group: TestCenas
+    group: TestStuff
     label_template: "${COUNT}"
     locking: on
     materials:
