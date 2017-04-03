@@ -1,4 +1,3 @@
-
 #https://github.com/tomzo/gocd-yaml-config-plugin
 environments:
   Teste:
@@ -11,7 +10,7 @@ environments:
 
 pipelines:
   Test.Android:
-    group: testcenas
+    group: TestCenas
     label_template: "${COUNT}"
     locking: on
     materials:
