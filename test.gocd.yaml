@@ -29,9 +29,9 @@ pipelines:
               run_instances: 1
               tasks:
                 - exec: # indicates type of task
-                  command: sh
-                  arguments:
-                    - "./hello_world.sh"
+                    command: sh
+                    arguments:
+                      - "./hello_world.sh"
             megaCenas: # name of the job
               timeout: 15
               run_instances: 1
