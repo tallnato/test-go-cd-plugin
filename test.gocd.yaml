@@ -27,11 +27,11 @@ pipelines:
         fetch_materials: yes
         keep_artifacts: no
         clean_workspace: yes
-          jobs:
-            Setup: # name of the job
-              timeout: 15
-              run_instances: 1
-              tasks:
-               - exec: # indicates type of task
-                   script: ./hello_world.sh
+        jobs:
+          Setup: # name of the job
+            timeout: 15
+            run_instances: 1
+            tasks:
+             - exec: # indicates type of task
+                 script: ./hello_world.sh
 
