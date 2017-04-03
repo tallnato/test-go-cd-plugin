@@ -4,12 +4,12 @@ environments:
     environment_variables:
       CD_MACHINE: true
     pipelines:
-      - TestWRGroceries-Master
+      - TestWRGroceries
     agents:
       - bb4fe841-b247-4f56-a2b8-751052ef64f5
 
 pipelines:
-  TestWRGroceries-Master:
+  TestWRGroceries:
     group: Test
     label_template: "${COUNT}"
     locking: on
