@@ -1,0 +1,37 @@
+#https://github.com/tomzo/gocd-yaml-config-plugin
+environments:
+  "Test.android":
+    pipelines:
+      - TestWRGroceries-Master
+
+agents:
+  - bb4fe841-b247-4f56-a2b8-751052ef64f5
+
+environment_variables:
+  CD_MACHINE: true
+
+pipelines:
+  "TestWRGroceries-Master":
+    group: Test
+    label_template: "${COUNT}"
+    locking: on
+    timer:
+      only_on_changes: yes
+    materials:
+      mygit:  # this is the name of material
+        # says about type of material and url at once
+        git: https://github.com/tallnato/test-go-cd-plugin.git
+        branch: master
+    stages:
+      - Setup: # name of stage
+        fetch_materials: yes
+        keep_artifacts: no
+        clean_workspace: yes
+          jobs:
+            Setup: # name of the job
+              timeout: 15
+              run_instances: 1
+              tasks:
+               - exec: # indicates type of task
+                   script: ./hello_world.sh
+
