@@ -1,4 +1,14 @@
-# simple.gocd.yaml
+
+#https://github.com/tomzo/gocd-yaml-config-plugin
+environments:
+  Teste:
+    environment_variables:
+      CD_MACHINE: true
+    pipelines:
+      - Test.Android
+    agents:
+      - bb4fe841-b247-4f56-a2b8-751052ef64f5
+
 pipelines:
   Test.Android:
     group: testcenas
