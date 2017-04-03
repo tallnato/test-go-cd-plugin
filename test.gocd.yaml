@@ -1,15 +1,15 @@
 #https://github.com/tomzo/gocd-yaml-config-plugin
 environments:
-  "Test.android":
+  testandroid:
     environment_variables:
       CD_MACHINE: true
     pipelines:
-      - "TestWRGroceries"
+      - testwrgroceries
     agents:
       - bb4fe841-b247-4f56-a2b8-751052ef64f5
 
 pipelines:
-  "TestWRGroceries":
+  testwrgroceries:
     group: Test
     label_template: "${COUNT}"
     locking: on
