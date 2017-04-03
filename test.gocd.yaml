@@ -10,25 +10,12 @@ pipelines:
         git: https://github.com/tallnato/test-go-cd-plugin.git
         branch: master
     stages:
-      - setupstage: # name of stage
-        fetch_materials: yes
-        keep_artifacts: no
-        clean_workspace: yes
-        jobs:
-          setupjob: # name of the job
-            timeout: 15
-            run_instances: 1
-            tasks:
-             - exec: # indicates type of task
-                 script: ./hello_world.sh
-      - megastuff: # name of stage
-        fetch_materials: yes
-        keep_artifacts: no
-        clean_workspace: yes
-        jobs:
-          megajob: # name of the job
-            timeout: 15
-            run_instances: 1
-            tasks:
-             - exec: # indicates type of task
-                 script: ./hello_world.sh
+      - megaBuild: # name of stage
+          fetch_materials: yes
+          keep_artifacts: no
+          clean_workspace: yes
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: make
