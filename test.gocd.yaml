@@ -1,12 +1,12 @@
 #https://github.com/tomzo/gocd-yaml-config-plugin
-environments:
-  testandroid:
-    environment_variables:
-      CD_MACHINE: true
-    pipelines:
-      - testwrgroceries
-    agents:
-      - bb4fe841-b247-4f56-a2b8-751052ef64f5
+#environments:
+#  testandroid:
+#    environment_variables:
+#      CD_MACHINE: true
+#    pipelines:
+#      - testwrgroceries
+#    agents:
+#      - bb4fe841-b247-4f56-a2b8-751052ef64f5
 
 pipelines:
   testwrgroceries:
