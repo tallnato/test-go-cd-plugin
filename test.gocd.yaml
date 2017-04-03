@@ -28,7 +28,6 @@ pipelines:
               timeout: 15
               run_instances: 1
               tasks:
-                - script: ./hello_world.sh
                 command: sh
                 arguments:
                     - "./hello_world.sh"
