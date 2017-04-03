@@ -25,3 +25,18 @@ pipelines:
               run_instances: 1
               tasks:
                 - script: ./hello_world.sh
+      - megaBuildeSegunda: # name of stage
+          fetch_materials: yes
+          keep_artifacts: no
+          clean_workspace: yes
+          jobs:
+            megaJobe: # name of the job
+              timeout: 15
+              run_instances: 1
+              tasks:
+                - script: ./hello_world.sh
+            megaCenas: # name of the job
+              timeout: 15
+              run_instances: 1
+              tasks:
+                - script: ./hello_world.sh
