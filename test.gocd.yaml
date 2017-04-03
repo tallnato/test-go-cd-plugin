@@ -1,6 +1,6 @@
 # simple.gocd.yaml
 pipelines:
-  pipe1:
+  Test.Android:
     group: test
     materials:
       mygit:  # this is the name of material
