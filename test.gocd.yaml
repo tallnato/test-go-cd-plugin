@@ -22,12 +22,12 @@ pipelines: # tells plugin that here are pipelines by name
         git: https://github.com/tallnato/test-go-cd-plugin.git
         branch: master
     stages:
-      - Setup: # name of stage
+      - setupstage: # name of stage
         fetch_materials: yes
         keep_artifacts: no
         clean_workspace: yes
         jobs:
-          Setup: # name of the job
+          setupjob: # name of the job
             timeout: 15
             run_instances: 1
             tasks:
