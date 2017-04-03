@@ -1,14 +1,12 @@
 #https://github.com/tomzo/gocd-yaml-config-plugin
 environments:
   "Test.android":
+    environment_variables:
+      CD_MACHINE: true
     pipelines:
       - TestWRGroceries-Master
-
-agents:
-  - bb4fe841-b247-4f56-a2b8-751052ef64f5
-
-environment_variables:
-  CD_MACHINE: true
+    agents:
+      - bb4fe841-b247-4f56-a2b8-751052ef64f5
 
 pipelines:
   "TestWRGroceries-Master":
