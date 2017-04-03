@@ -10,12 +10,12 @@ pipelines:
         git: https://github.com/tallnato/test-go-cd-plugin.git
         branch: master
     stages:
-      - megaBuild: # name of stage
+      - megaBuilde: # name of stage
           fetch_materials: yes
           keep_artifacts: no
           clean_workspace: yes
           jobs:
-            megaJob: # name of the job
+            megaJobe: # name of the job
               timeout: 15
               run_instances: 1
               tasks:
