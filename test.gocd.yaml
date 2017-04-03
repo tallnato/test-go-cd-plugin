@@ -4,7 +4,7 @@ environments:
     environment_variables:
       CD_MACHINE: true
     pipelines:
-      - testwrgroceries
+      testwrgroceries
     agents:
       - bb4fe841-b247-4f56-a2b8-751052ef64f5
 
