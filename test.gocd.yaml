@@ -8,9 +8,9 @@
 #    agents:
 #      - bb4fe841-b247-4f56-a2b8-751052ef64f5
 
-pipelines:
+pipelines: # tells plugin that here are pipelines by name
   testwrgroceries:
-    group: Test
+    group: test
     label_template: "${COUNT}"
     locking: on
     #timer:
