@@ -21,3 +21,14 @@ pipelines:
             tasks:
              - exec: # indicates type of task
                  script: ./hello_world.sh
+      - megastuff: # name of stage
+        fetch_materials: yes
+        keep_artifacts: no
+        clean_workspace: yes
+        jobs:
+          megajob: # name of the job
+            timeout: 15
+            run_instances: 1
+            tasks:
+             - exec: # indicates type of task
+                 script: ./hello_world.sh
