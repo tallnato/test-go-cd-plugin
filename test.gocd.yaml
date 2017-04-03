@@ -19,5 +19,4 @@ pipelines:
               timeout: 15
               run_instances: 1
               tasks:
-               - exec: # indicates type of task
-                   script: ./hello_world.sh
+               - script: ./hello_world.sh
