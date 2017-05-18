@@ -39,8 +39,8 @@ pipelines:
               artifacts:
               - test:
                   source: dummy.txt
-                  destination: cenas/dummy.txt
-                  
+                  destination: cenas/
+
             list: # name of the job
               timeout: 15
               run_instances: 1
