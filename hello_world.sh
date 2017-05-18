@@ -3,3 +3,6 @@
 STRING="Hello World"
 #print variable on a screen
 echo $STRING
+
+
+echo "cenas" > dummy.txt

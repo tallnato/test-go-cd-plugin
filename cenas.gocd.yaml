@@ -37,18 +37,29 @@ pipelines:
               run_instances: 1
               tasks:
                 - script: ./hello_world.sh
+          artifacts:
+              - test:
+                  source: dummy.txt
+                  destination: cenas/dummy.txt
       - megaBuildeSegunda: # name of stage
           fetch_materials: yes
           keep_artifacts: no
           clean_workspace: yes
           jobs:
-            megaJobe: # name of the job
-              timeout: 15
-              run_instances: 1
-              tasks:
-                - script: ./hello_world.sh
+#            megaJobe: # name of the job
+#              timeout: 15
+#              run_instances: 1
+#              tasks:
+#                - script: ./hello_world.sh
             megaCenas: # name of the job
               timeout: 15
               run_instances: 1
               tasks:
-                - script: ./hello_world.sh
+                - fetch:
+                    pipeline: Test.Android
+                    stage: megaBuilde
+                    job: megaJobe
+                    source: cenas/
+                    destination: coisas/
+                - script: ./.sh
+
