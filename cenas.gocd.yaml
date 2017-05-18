@@ -24,7 +24,7 @@ pipelines:
           keep_artifacts: no
           clean_workspace: yes
           jobs:
-            megaJobe: # name of the job
+            create: # name of the job
               timeout: 15
               run_instances: 1
               tasks:
@@ -32,14 +32,14 @@ pipelines:
                     command: sh
                     arguments:
                       - "./hello_world.sh"
-            megaCenas: # name of the job
+            list: # name of the job
               timeout: 15
               run_instances: 1
               tasks:
                 - exec: # indicates type of task
-                    command: sh
+                    command: ls 
                     arguments:
-                      - "./hello_world.sh"
+                      - "-la"
           artifacts:
               - test:
                   source: dummy.txt
