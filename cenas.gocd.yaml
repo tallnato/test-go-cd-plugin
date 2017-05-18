@@ -32,6 +32,10 @@ pipelines:
                     command: sh
                     arguments:
                       - "./hello_world.sh"
+                - exec: # indicates type of task
+                    command: ls 
+                    arguments:
+                      - "-la"
             list: # name of the job
               timeout: 15
               run_instances: 1
