@@ -61,7 +61,7 @@ pipelines:
                 - fetch:
                     pipeline: Test.Android
                     stage: megaBuilde
-                    job: megaJobe
+                    job: create
                     source: cenas/
                     destination: coisas/
                 - exec: # indicates type of task
