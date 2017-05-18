@@ -36,6 +36,11 @@ pipelines:
                     command: ls 
                     arguments:
                       - "-la"
+              artifacts:
+              - test:
+                  source: dummy.txt
+                  destination: cenas/dummy.txt
+                  
             list: # name of the job
               timeout: 15
               run_instances: 1
@@ -44,10 +49,7 @@ pipelines:
                     command: ls 
                     arguments:
                       - "-la"
-          artifacts:
-              - test:
-                  source: dummy.txt
-                  destination: cenas/dummy.txt
+            
       - megaBuildeSegunda: # name of stage
           fetch_materials: yes
           keep_artifacts: no
