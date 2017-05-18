@@ -37,9 +37,9 @@ pipelines:
                     arguments:
                       - "-la"
               artifacts:
-              - build:
-                  source: dummy.txt
-                  destination: cenas/
+                - build:
+                    source: dummy.txt
+                    destination: .
 
             list: # name of the job
               timeout: 15
@@ -68,7 +68,7 @@ pipelines:
                     pipeline: Test.Android
                     stage: megaBuilde
                     job: create
-                    source: cenas/
+                    source: .
                     destination: coisas/
                 - exec: # indicates type of task
                     command: sh
