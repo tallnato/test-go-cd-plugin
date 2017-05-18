@@ -37,7 +37,7 @@ pipelines:
                     arguments:
                       - "-la"
               artifacts:
-              - test:
+              - build:
                   source: dummy.txt
                   destination: cenas/
 
