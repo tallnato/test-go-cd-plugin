@@ -36,7 +36,10 @@ pipelines:
               timeout: 15
               run_instances: 1
               tasks:
-                - script: ./hello_world.sh
+                - exec: # indicates type of task
+                    command: sh
+                    arguments:
+                      - "./hello_world.sh"
           artifacts:
               - test:
                   source: dummy.txt
@@ -61,5 +64,8 @@ pipelines:
                     job: megaJobe
                     source: cenas/
                     destination: coisas/
-                - script: ./.sh
+                - exec: # indicates type of task
+                    command: sh
+                    arguments:
+                      - "./print.sh"
 
